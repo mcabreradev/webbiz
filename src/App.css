@@ -1,0 +1,45 @@
+body, input, button, a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 22px;
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  width: 320px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.centered-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.input:focus, .input.is-focused, .input:active, .input.is-active {
+  border-color: #fc6f35;
+  box-shadow: none;
+} 
+
+.field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.bottom-link-1st{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.bottom-link-2nd {
+  font-size: 12.8px;
+  margin-top: 0;
+  margin-bottom: .25rem;
+}
