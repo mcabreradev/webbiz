@@ -24,9 +24,9 @@ class App extends Component {
           <Logo/>
 
           <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
+            <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
+            <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={Signup} />
             <Route component={Error} />
           </Switch>
 
