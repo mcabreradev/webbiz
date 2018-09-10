@@ -68,17 +68,17 @@ class Login extends Component {
 
         <FooterLinks className="bottom-link-1st">
           { texts.signup.complementary }{' '} 
-          <Link to="/signup" href="/signup">{ texts.signup.text }</Link>
+          <Link to={`${process.env.PUBLIC_URL}/signup`} href={`${process.env.PUBLIC_URL}/signup`}>{ texts.signup.text }</Link>
         </FooterLinks>
 
         <FooterLinks className="bottom-link-2nd">
           { texts.password.text }{' '}
-          <Link to="/forgot" href="/forgot">{ texts.password.title }</Link>
+          <Link to={`${process.env.PUBLIC_URL}/forgot`} href={`${process.env.PUBLIC_URL}/forgot`}>{ texts.password.title }</Link>
         </FooterLinks>
 
         <FooterLinks className="bottom-link-2nd">
           { texts.email.text }{' '}
-          <Link to="/verify" href="/verify">{ texts.email.title }</Link>
+          <Link to={`${process.env.PUBLIC_URL}/verify`} href={`${process.env.PUBLIC_URL}/verify`}>{ texts.email.title }</Link>
         </FooterLinks>
 
       </Card>

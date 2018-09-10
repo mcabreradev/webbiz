@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { injectGlobal } from "styled-components";
 
 // Containers
 import Login from "./containers/Login";
@@ -10,9 +11,15 @@ import Error from "./components/Error";
 import Logo from './components/Logo';
 import Footer from './components/Footer';
 
+// Styles
 import "bulma/css/bulma.css";
 import "./App.css";
-
+import background from "./static/img/hw-bg.jpg";
+injectGlobal `
+  body {
+    background-image: url(${background});
+  }
+`;
 
 class App extends Component {
   render() {
