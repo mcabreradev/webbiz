@@ -15,17 +15,14 @@ const StyledForm = styled.div`
 const FooterLinks = styled.p`
   font-weight: 500;
   margin-bottom: .25rem;
-
   a { 
     font-weight: 500;
     color: ${colors.black} !important;
-
     &:hover {
       color: ${colors.orange} !important;
       text-decoration: none; 
     } 
   }
-
 `;
 
 class Login extends Component {

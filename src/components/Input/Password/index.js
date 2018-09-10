@@ -62,22 +62,33 @@ const PasswordBar = (props) => {
     return 'white';
   };
 
-  const text = (val) => {
-    if (val === 0) {
-      return 'Your password needs to be stronger.';
-    } else if (val === 1) {
-      return 'Your password is too weak.';
-    } else if (val === 2) {
-      return 'Your password is only ok.';
-    } else if (val === 3) {
-      return 'Your password is great!';
+  const text = (value) => {
+    var label = null;
+
+    switch (value) {
+        case 0:
+            label = 'Your password needs to be stronger.';
+            break;
+        case 1:
+            label = 'Your password is too weak.';
+            break;
+        case 2:
+            label = 'Your password is only ok.';
+            break;
+        case 3:
+            label = 'Your password is great!';
+            break;
+        default:
+            label = 'Your password rocks!.';
+            break;
     }
-    return 'Your password rocks!.';
+    
+    return label;
   };
   return (
     <PasswordBarWrapper>
-      <StrengthMeter width={(score / 4) * 100} color={color(score)} />
-      <Text color={textColor(score)}>{text(score)}</Text>
+      <StrengthMeter width={ (score / 4) * 100 } color={ color(score) } />
+      <Text color={ textColor(score) }>{ text(score) }</Text>
     </PasswordBarWrapper>
   );
 };

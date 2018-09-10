@@ -6,6 +6,8 @@ import Card from '../../components/Card';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
+import PasswordBar from '../../components/Input/Password';
+
 import { texts, colors } from '../../config';
 
 const StyledForm = styled.div`
@@ -48,13 +50,15 @@ class Signup extends Component {
       lastname: '',
       email: '',
       password: '',
-      isChecked: false
+      passwordType: 'password',
+      isChecked: false,
     };
 
     // binding
     this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onToggle = this.onToggle.bind(this);
+    this.viewPassword = this.viewPassword.bind(this);
   }
 
   onSubmit(event) {
@@ -64,15 +68,20 @@ class Signup extends Component {
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-    console.log({ [e.target.name]: e.target.value });
   }
 
   onToggle (e) {
     this.setState({ [e.target.name]: !this.state[e.target.name] });
   }
 
+  viewPassword (e) {
+    e.preventDefault();
+    this.setState({passwordType: this.state.passwordType === "text" ? "password" : "text"});
+  }
+
+
   render() { 
-    const { isChecked } = this.state;
+    const { isChecked, password, passwordType } = this.state;
 
     return ( 
       <Card>
@@ -83,8 +92,19 @@ class Signup extends Component {
           <Input name="firstname" type="text" placeholder="First Name" icon="fas fa-user-plus" onChange={this.onChange} />
           <Input name="lastname" type="email" placeholder="Last Name" icon="fas fa-user-plus" onChange={this.onChange} />
           <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
-          <Input name="password" type="password" placeholder="Password" icon="fas fa-lock" onChange={this.onChange} />
           
+          <Input name="password" 
+            type={passwordType} 
+            placeholder="Password" 
+            onChange={this.onChange} 
+            onClick={this.viewPassword}
+            onKeyPress={this.viewPassword}
+            nonStatic
+            icon={ passwordType === "password" ? password.length === 0 ? "fas fa-lock" : "far fa-eye" : "far fa-times-circle"}
+          />
+
+          { password.length > 0 && ( <PasswordBar password={ password } /> ) } 
+
           <div className="field" style={style3}>
             <label className="checkbox">
               <input name="isChecked" type="checkbox" style={style2} checked={ isChecked } onChange={this.onToggle} /> I agree to the terms and condtions*
