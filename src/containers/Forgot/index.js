@@ -25,13 +25,12 @@ const FooterLinks = styled.p`
   }
 `;
 
-class Login extends Component {
+class Forgot extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
-      password: '',
     };
 
     // binding
@@ -53,29 +52,18 @@ class Login extends Component {
     return ( 
       <Card>
 
-        <h5>{ texts.login.title }</h5>
+        <h5>{ texts.forgot.title }</h5>
     
         <StyledForm className="control">
           <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
-          <Input name="password" type="password" placeholder="Password" icon="fas fa-lock" onChange={this.onChange} />
-          <Button onClick={this.onSubmit}>{ texts.login.btn }</Button>
+          <Button onClick={this.onSubmit}>{ texts.forgot.btn }</Button>
         </StyledForm>
 
         <hr/>
 
         <FooterLinks className="bottom-link-1st">
-          { texts.signup.complementary }{' '} 
-          <Link to={`${process.env.PUBLIC_URL}/signup`} href={`${process.env.PUBLIC_URL}/signup`}>{ texts.signup.text }</Link>
-        </FooterLinks>
-
-        <FooterLinks className="bottom-link-2nd">
-          { texts.forgot.text }{' '}
-          <Link to={`${process.env.PUBLIC_URL}/forgot`} href={`${process.env.PUBLIC_URL}/forgot`}>{ texts.forgot.title }</Link>
-        </FooterLinks>
-
-        <FooterLinks className="bottom-link-2nd">
-          { texts.verify.text }{' '}
-          <Link to={`${process.env.PUBLIC_URL}/verify`} href={`${process.env.PUBLIC_URL}/verify`}>{ texts.verify.title }</Link>
+          { texts.forgot.complementary }{' '} 
+          <Link to={`${process.env.PUBLIC_URL}/login`} href={`${process.env.PUBLIC_URL}/login`}>{ texts.login.text }</Link>
         </FooterLinks>
 
       </Card>
@@ -83,4 +71,4 @@ class Login extends Component {
   }
 }
  
-export default Login;
+export default Forgot;

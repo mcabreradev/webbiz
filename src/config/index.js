@@ -5,7 +5,7 @@ export const texts = {
         title: "Login to your account",
         complementary: "Already a user?",
         text: "Login",
-        btn: "Login"
+        btn: "Login",
     },
 
     signup: {
@@ -15,14 +15,18 @@ export const texts = {
         btn: "Signup"
     },
 
-    password: {
+    forgot: {
         title: "Reset Password",
+        complementary: "Know your password?",
         text: "Forgot your password?",
+        btn: "Reset Password",
     },
 
-    email: {
+    verify: {
         title: "Verify Email",
+        complementary: "If you have not received an email yet, check your junk folder, or resend the email now.",
         text: "Need to verify your email?",
+        btn: "Resend Verify Email",
     },
 
     notices: [

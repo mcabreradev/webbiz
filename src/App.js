@@ -5,6 +5,8 @@ import { injectGlobal } from "styled-components";
 // Containers
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
+import Forgot from "./containers/Forgot";
+import Verify from "./containers/Verify";
 import Error from "./components/Error";
 
 // Components
@@ -34,6 +36,9 @@ class App extends Component {
             <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
             <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
             <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={Signup} />
+            <Route exact path={`${process.env.PUBLIC_URL}/forgot`} component={Forgot} />
+            <Route exact path={`${process.env.PUBLIC_URL}/verify`} component={Verify} />
+            {/* <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={Signup} /> */}
             <Route component={Error} />
           </Switch>
 

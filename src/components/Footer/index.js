@@ -5,9 +5,10 @@ import { texts, colors } from '../../config';
 
 const StyledFooter = styled.div`
     background: ${colors.white};
-    width: 240px;
+    width: 32vw;
+    max-width: 380px;
     margin: 0px auto;
-    margin-top: 1rem!important;
+    margin-top: .1rem!important;
     padding: 15px;
 `;
 
