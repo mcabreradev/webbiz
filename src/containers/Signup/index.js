@@ -5,29 +5,15 @@ import styled from 'styled-components';
 import Card from '../../components/Card';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-
+import FooterLink from '../../components/Footer/Link';
 import PasswordBar from '../../components/Input/Password';
+import Wrapper from '../../components/Wrapper';
 
-import { texts, colors } from '../../config';
+// configuration
+import { texts } from '../../config';
 
 const StyledForm = styled.div`
   margin-top: 1.5rem;
-`;
-
-const FooterLinks = styled.p`
-  font-weight: 500;
-  margin-bottom: .25rem;
-
-  a { 
-    font-weight: 500;
-    color: ${colors.black} !important;
-
-    &:hover {
-      color: ${colors.orange} !important;
-      text-decoration: none; 
-    } 
-  }
-
 `;
 
 const style2 = {
@@ -84,50 +70,45 @@ class Signup extends Component {
     const { isChecked, password, passwordType } = this.state;
 
     return ( 
-      <Card>
+      <Wrapper>
+        <Card>
+          <h5>{ texts.signup.title }</h5>
+          <StyledForm className="control">
+            <Input name="firstname" type="text" placeholder="First Name" icon="fas fa-user-plus" onChange={this.onChange} />
+            <Input name="lastname" type="email" placeholder="Last Name" icon="fas fa-user-plus" onChange={this.onChange} />
+            <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
+            
+            <Input name="password" 
+              type={passwordType} 
+              placeholder="Password" 
+              onChange={this.onChange} 
+              onClick={this.viewPassword}
+              onKeyPress={this.viewPassword}
+              nonStatic
+              icon={ passwordType === "password" ? password.length === 0 ? "fas fa-lock" : "far fa-eye" : "far fa-times-circle"}
+            />
 
-        <h5>{ texts.signup.title }</h5>
-    
-        <StyledForm className="control">
-          <Input name="firstname" type="text" placeholder="First Name" icon="fas fa-user-plus" onChange={this.onChange} />
-          <Input name="lastname" type="email" placeholder="Last Name" icon="fas fa-user-plus" onChange={this.onChange} />
-          <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
-          
-          <Input name="password" 
-            type={passwordType} 
-            placeholder="Password" 
-            onChange={this.onChange} 
-            onClick={this.viewPassword}
-            onKeyPress={this.viewPassword}
-            nonStatic
-            icon={ passwordType === "password" ? password.length === 0 ? "fas fa-lock" : "far fa-eye" : "far fa-times-circle"}
-          />
+            { password.length > 0 && ( <PasswordBar password={ password } /> ) } 
 
-          { password.length > 0 && ( <PasswordBar password={ password } /> ) } 
-
-          <div className="field" style={style3}>
-            <label className="checkbox">
-              <input name="isChecked" type="checkbox" style={style2} checked={ isChecked } onChange={this.onToggle} /> I agree to the terms and condtions*
-            </label>
-          </div>
-          
-          <Button className={ isChecked ? null : "disabled" } onClick={this.onSubmit}>{ texts.signup.btn }</Button>
-
-        </StyledForm>
-
-        <hr/>
-
-        <FooterLinks className="bottom-link-1st">
-          { texts.login.complementary }{' '} 
-          <Link to={`${process.env.PUBLIC_URL}/`} href={`${process.env.PUBLIC_URL}/`}>{ texts.login.text }</Link>
-        </FooterLinks>
-
-        <FooterLinks className="bottom-link-2nd">
-          { texts.email.text }{' '}
-          <Link to={`${process.env.PUBLIC_URL}/verify`} href={`${process.env.PUBLIC_URL}/verify`}>{ texts.email.title }</Link>
-        </FooterLinks>
-
-      </Card>
+            <div className="field" style={style3}>
+              <label className="checkbox">
+                <input name="isChecked" type="checkbox" style={style2} checked={ isChecked } onChange={this.onToggle} /> I agree to the terms and condtions*
+              </label>
+            </div>
+            
+            <Button className={ isChecked ? null : "disabled" } onClick={this.onSubmit}>{ texts.signup.btn }</Button>
+          </StyledForm>
+          <hr/>
+          <FooterLink className="bottom-link-1st">
+            { texts.login.complementary }{' '} 
+            <Link to={`${process.env.PUBLIC_URL}/`} href={`${process.env.PUBLIC_URL}/`}>{ texts.login.text }</Link>
+          </FooterLink>
+          <FooterLink className="bottom-link-2nd">
+            { texts.verify.text }{' '}
+            <Link to={`${process.env.PUBLIC_URL}/verify`} href={`${process.env.PUBLIC_URL}/verify`}>{ texts.verify.title }</Link>
+          </FooterLink>
+        </Card>
+      </Wrapper>
      );
   }
 }

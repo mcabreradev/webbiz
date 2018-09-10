@@ -9,10 +9,6 @@ import Forgot from "./containers/Forgot";
 import Verify from "./containers/Verify";
 import Error from "./components/Error";
 
-// Components
-import Logo from './components/Logo';
-import Footer from './components/Footer';
-
 // Styles
 import "bulma/css/bulma.css";
 import "./App.css";
@@ -29,21 +25,14 @@ class App extends Component {
     return (
       <Router>
         <div>
-
-          <Logo/>
-
           <Switch>
             <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
             <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
             <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={Signup} />
             <Route exact path={`${process.env.PUBLIC_URL}/forgot`} component={Forgot} />
             <Route exact path={`${process.env.PUBLIC_URL}/verify`} component={Verify} />
-            {/* <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={Signup} /> */}
             <Route component={Error} />
           </Switch>
-
-          <Footer />
-
         </div>
       </Router>
     );

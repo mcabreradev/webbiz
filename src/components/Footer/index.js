@@ -19,9 +19,9 @@ const StyledParagraph = styled.p`
     padding-top: 15px;
 `;
 
-const Footer = () => {
+const Footer = (props) => {
     return (
-        <StyledFooter>
+        <StyledFooter className={ props.noFooter ? "is-invisible" : null }>
             { texts.notices.map( (notice, key) => {
                 return (<StyledParagraph key={ key }>{ notice }</StyledParagraph>)
             }) }

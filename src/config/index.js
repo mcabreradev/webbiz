@@ -16,7 +16,7 @@ export const texts = {
     },
 
     forgot: {
-        title: "Reset Password",
+        title: "Forgot Password",
         complementary: "Know your password?",
         text: "Forgot your password?",
         btn: "Reset Password",
