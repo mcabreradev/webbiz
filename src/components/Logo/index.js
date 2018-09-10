@@ -4,10 +4,16 @@ import logo from '../../static/img/hw-logo.svg';
 import { texts } from '../../config';
 
 const Logo = (props) => {
-    const { width, logo, title, style, noFooter } = props;
+    const { width, logo, title, style, isError } = props;
 
     return (
-      <img style={style} src={logo} width={width} alt={title} aria-label={title} className={ noFooter ? "is-invisible" : null }/>
+      <img 
+        style={style} 
+        src={logo} 
+        width={width} 
+        alt={title} 
+        aria-label={title} 
+        className={ isError ? "is-invisible" : null }/>
     );
 };
   

@@ -66,7 +66,7 @@ const ButtonWraper = styled.button `
 
 const Button = props => ( 
   <ButtonWraper { ...props }> 
-      { props.children } 
+    { props.children } 
   </ButtonWraper>
 );
 

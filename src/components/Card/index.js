@@ -14,9 +14,9 @@ const Box = styled.div`
   border-color: ${colors.light_grey} !important;
 `;
 const Card = props => (
-    <Box className="card has-text-centered">
-        { props.children }
-    </Box>
+  <Box className="card has-text-centered">
+    { props.children }
+  </Box>
 );
 
 Card.propTypes = {

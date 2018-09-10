@@ -17,6 +17,7 @@ const StyledForm = styled.div`
 `;
 class Login extends Component {
   constructor(props) {
+
     super(props);
 
     this.state = {
@@ -49,15 +50,19 @@ class Login extends Component {
             <Input name="password" type="password" placeholder="Password" icon="fas fa-lock" onChange={this.onChange} />
             <Button onClick={this.onSubmit}>{ texts.login.btn }</Button>
           </StyledForm>
+
           <hr/>
+
           <FooterLink className="bottom-link-1st">
             { texts.signup.complementary }{' '} 
             <Link to={`${process.env.PUBLIC_URL}/signup`} href={`${process.env.PUBLIC_URL}/signup`}>{ texts.signup.text }</Link>
           </FooterLink>
+
           <FooterLink className="bottom-link-2nd">
             { texts.forgot.text }{' '}
             <Link to={`${process.env.PUBLIC_URL}/forgot`} href={`${process.env.PUBLIC_URL}/forgot`}>{ texts.forgot.title }</Link>
           </FooterLink>
+          
           <FooterLink className="bottom-link-2nd">
             { texts.verify.text }{' '}
             <Link to={`${process.env.PUBLIC_URL}/verify`} href={`${process.env.PUBLIC_URL}/verify`}>{ texts.verify.title }</Link>

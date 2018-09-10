@@ -13,9 +13,13 @@ const Wrapper = props => {
 
     return ( 
         <WrapperStyled> 
+
             <Logo { ...props } />
+            
             { props.children } 
+
             <Footer  { ...props } />
+
         </WrapperStyled>
       );
 } 

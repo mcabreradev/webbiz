@@ -17,7 +17,9 @@ const FooterLinksStyled = styled.p`
 
 const FooterLink = props => ( 
     <FooterLinksStyled { ...props }> 
+    
         { props.children } 
+
     </FooterLinksStyled>
   );
  

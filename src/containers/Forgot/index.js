@@ -42,15 +42,19 @@ class Forgot extends Component {
       <Wrapper>
         <Card>
           <h5>{ texts.forgot.title }</h5>
+
           <StyledForm className="control">
             <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
             <Button onClick={this.onSubmit}>{ texts.forgot.btn }</Button>
           </StyledForm>
+
           <hr/>
+
           <FooterLink className="bottom-link-1st">
             { texts.forgot.complementary }{' '} 
             <Link to={`${process.env.PUBLIC_URL}/login`} href={`${process.env.PUBLIC_URL}/login`}>{ texts.login.text }</Link>
           </FooterLink>
+
         </Card>
       </Wrapper>
      );

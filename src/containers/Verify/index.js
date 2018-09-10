@@ -41,19 +41,25 @@ class Verify extends Component {
     return ( 
       <Wrapper>
         <Card>
+          
           <h5>{ texts.forgot.title }</h5>
+          
           <FooterLink className="bottom-link-1st">
             { texts.verify.complementary }{' '} 
           </FooterLink>
+          
           <StyledForm className="control">
             <Input name="email" type="email" placeholder="Email" icon="far fa-envelope" onChange={this.onChange} />
             <Button onClick={this.onSubmit}>{ texts.verify.btn }</Button>
           </StyledForm>
+          
           <hr/>
+          
           <FooterLink className="bottom-link-1st">
             { texts.forgot.complementary }{' '} 
             <Link to={`${process.env.PUBLIC_URL}/login`} href={`${process.env.PUBLIC_URL}/login`}>{ texts.login.text }</Link>
           </FooterLink>
+
         </Card>
       </Wrapper>
      );
