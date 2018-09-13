@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Card, Input, Button,  FooterLink, PasswordBar, Wrapper } from '../../components';
 import styled from 'styled-components';
-
-import Card from '../../components/Card';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-import FooterLink from '../../components/Footer/Link';
-import PasswordBar from '../../components/Input/Password';
-import Wrapper from '../../components/Wrapper';
-
-// configuration
 import { texts } from '../../config';
 
 const StyledForm = styled.div`

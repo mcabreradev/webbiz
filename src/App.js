@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { injectGlobal } from "styled-components";
 
-// Containers
-import Login from "./containers/Login";
-import Signup from "./containers/Signup";
-import Forgot from "./containers/Forgot";
-import Verify from "./containers/Verify";
-import Error from "./components/Error";
-
+import { Login, Signup, Forgot, Verify } from './containers';
+import { Error } from "./components";
+ 
 // Styles
 import "bulma/css/bulma.css";
 import "./App.css";

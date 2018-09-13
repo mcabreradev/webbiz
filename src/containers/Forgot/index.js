@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import styled from 'styled-components';
-
-import Card from '../../components/Card';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-import FooterLink from '../../components/Footer/Link';
-import Wrapper from '../../components/Wrapper';
-
+import { Link } from 'react-router-dom';
+import { Card, Input, Button,  FooterLink, Wrapper } from '../../components';
 import { texts } from '../../config';
+import styled from 'styled-components';
 
 const StyledForm = styled.div`
   margin-top: 1.5rem;
@@ -22,7 +16,6 @@ class Forgot extends Component {
       email: '',
     };
 
-    // binding
     this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
   }

@@ -16,11 +16,9 @@ const FooterLinksStyled = styled.p`
 `;
 
 const FooterLink = props => ( 
-    <FooterLinksStyled { ...props }> 
-    
-        { props.children } 
-
-    </FooterLinksStyled>
+  <FooterLinksStyled { ...props }> 
+    { props.children } 
+  </FooterLinksStyled>
   );
  
 export default FooterLink;
