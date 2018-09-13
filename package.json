@@ -25,5 +25,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b gh-pages -d build"
   },
-  "homepage": "https://mcabreradev.github.io/webbiz"
+  "homepage": "https://mcabreradev.github.io/webbiz",
+  "devDependencies": {
+    "flow-bin": "^0.80.0"
+  }
 }
