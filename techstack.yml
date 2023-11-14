@@ -1,0 +1,223 @@
+repo_name: mcabreradev/webbiz
+report_id: 3f3a5c2ded67bd6137061c1aefd2fce2
+repo_type: Public
+timestamp: '2023-11-14T15:30:21+00:00'
+requested_by: mcabreradev
+provider: github
+branch: master
+detected_tools_count: 17
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: Bulma
+  description: Free, open source, &amp; modern CSS framework based on Flexbox
+  website_url: http://bulma.io/
+  version: 0.7.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/5204/bulma-logo.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 16.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 4.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: styled-components
+  description: Visual primitives for the component age. Use the best bits of ES6 and
+    CSS to style your apps without stress.
+  website_url: https://styled-components.com
+  version: 3.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/6749/styled-components.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-10 20:14:01.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source: yarn.lock
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: zxcvbn
+  website_url: https://github.com/dropbox/zxcvbn
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/7797/559357.png
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-10 20:14:01.000000000 Z
+- name: flow-bin
+  description: Binary wrapper for Flow - A static type checker for JavaScript
+  package_url: https://www.npmjs.com/flow-bin
+  version: 0.80.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15957/default_f49d4c116f8ea0155f4d92673b084378bba02760.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-13 01:15:54.000000000 Z
+- name: gh-pages
+  description: Publish to a gh-pages branch on GitHub
+  package_url: https://www.npmjs.com/gh-pages
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15967/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-13 01:15:54.000000000 Z
+- name: node-sass-chokidar
+  description: A thin wrapper around node-sass to replicate the --watch --recursive
+    but with chokidar instead of Gaze
+  package_url: https://www.npmjs.com/node-sass-chokidar
+  version: 1.3.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17497/default_2ae5beb193365eca46e337162957275ebc9c6b3b.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 16.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: react-router
+  description: A complete routing library for React
+  package_url: https://www.npmjs.com/react-router
+  version: 4.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16058/default_261820f5687b4c88a3e8f95c71b5e8dccd34c1d7.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 4.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
+- name: react-scripts
+  description: Configuration and scripts for Create React App
+  package_url: https://www.npmjs.com/react-scripts
+  version: 1.1.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Miguelangel Cabrera
+  last_updated_on: 2018-09-09 12:24:54.000000000 Z
